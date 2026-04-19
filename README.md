@@ -21,7 +21,7 @@ Install the package:
 
 >pip install python_quant    
 
-Start the Web App:
+Start the Dash App:
 >start_app
 
 #### System-wide Installation:

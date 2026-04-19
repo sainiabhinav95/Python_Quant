@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 APP_TITLE = "PyQuant - A Quantitative Finance Toolkit in Python"
 
 
-def start_app(debug: bool = True):
+def start_app(debug: bool = True, port: int = 8060):
     app = Dash(
         APP_TITLE,
         external_stylesheets=[dbc.themes.LUX],
@@ -83,4 +83,4 @@ def start_app(debug: bool = True):
         fluid=True,
     )
     app.layout = layout
-    app.run(debug=debug, threaded=True)
+    app.run(debug=debug, threaded=True, port=port)

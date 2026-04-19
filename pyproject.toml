@@ -43,3 +43,9 @@ testpaths = [
 
 [tool.uv]
     package = true
+
+[tool.setuptools]
+packages = ["python_quant"]
+
+[tool.setuptools.package-dir]
+"" = "src"
