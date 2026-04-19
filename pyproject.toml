@@ -6,7 +6,8 @@ readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.12"
 license = { text = "MIT" }
 dependencies = [
-    "nicegui>=3.3.1",
+    "dash-bootstrap-components>=2.0.4",
+    "dash[diskcache]>=4.1.0",
     "numpy>=2.3.5",
     "polars>=1.35.2",
     "pytest>=9.0.1",
@@ -15,8 +16,7 @@ dependencies = [
     "sympy>=1.14.0",
 ]
 [project.scripts]
-python_quant = "python_quant.main:main"
-pyquant-app = "python_quant.app.app_main:start_app"
+start_app = "python_quant.main:main"
 
 [tool.ruff]
 # Optionally, specify files and directories to include or exclude
@@ -30,6 +30,10 @@ dev = [
     "pytest>=9.0.1",
     "pytest-cov>=7.0.0",
 ]
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12"]
+build-backend = "uv_build"
 
 [tool.pytest.ini_options]
 addopts = "--maxfail=1 --cov=testing_demo"
